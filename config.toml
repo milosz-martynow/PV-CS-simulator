@@ -1,0 +1,45 @@
+[General]
+title = "TMH-PV-sim"
+author = "Miłosz Martynow"
+email = "miloszmartynow@gmail.com"
+
+[ApplicationSetup]
+python_path = "/usr/bin/python3.8"
+python_libraries_installation = true
+rabbitmq_installation = true
+
+[RunSetup]
+#  naming_prefix: prefix added to the savepaths etc.
+#  verbosity: High or Low
+#  sampling: measurment sampling rate in seconds
+#  plot: true or false
+#  working_protocol: Continouus or Date_range
+#    Parameters to specify under each protocol:
+#    Continuous:
+#      continuous_protocol_lines_to_save - number of measurements to save
+#    DateRange:
+#      date_range_protocol_datetime_beg - start of simulation in datetime format: %Y-%m-%d %H:%M:%S
+#      date_range_protocol_datetime_end - end of simulation in dateime format: %Y-%m-%d %H:%M:%S
+naming_prefix = "test_Continuous"
+verbosity = "High"
+sampling = 2
+plot = true
+working_protocol = "Continuous"
+continuous_protocol_lines_to_save = 10
+date_range_protocol_datetime_beg = "2021-12-01 00:00:00"
+date_range_protocol_datetime_end = "2021-12-01 23:59:00"
+host = "localhost"
+queue = "Signal"
+
+[Meter]
+maximal_power_W = 9000
+power_consumption_peak_W = 7000
+constant_power_consumption_W = 200
+
+[Photovoltaics]
+latitude_deg = 48.12103145078505
+longitude_deg = 11.603113733907772
+area_m2 = 10
+efficiency = 0.2
+
+
